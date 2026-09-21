@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#1c1f1a">
+<meta name="robots" content="noindex">
+<title>That upload is too large (error 413) - Flea or Trader</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%231c1f1a%22%2F%3E%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%2210%22%20height%3D%2222%22%20rx%3D%221.5%22%20fill%3D%22%23e8a33d%22%2F%3E%3Crect%20x%3D%2217%22%20y%3D%225%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%221.5%22%20fill%3D%22%237eb6cf%22%2F%3E%3Crect%20x%3D%2217%22%20y%3D%2217%22%20width%3D%2210%22%20height%3D%2210%22%20rx%3D%221.5%22%20fill%3D%22%237eb6cf%22%20opacity%3D%22.55%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700&family=Saira+Semi+Condensed:wght@400;500;600&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --ground: #1c1f1a;
+  --panel: #252922;
+  --panel-raised: #2e332a;
+  --line: #3b4136;
+  --text: #e6e1d0;
+  --muted: #a3a291;
+  --faint: #767768;
+  --flea: #e8a33d;
+  --trader: #7eb6cf;
+  --alert: #e0705f;
+  --display: "Saira Extra Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Saira Semi Condensed", "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ground); color: var(--text); }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+  font: 400 1rem/1.5 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+header { padding-block: 1.1rem; }
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font: 700 1.9rem/1 var(--display);
+  text-decoration: none;
+}
+.brand .flea { color: var(--flea); }
+.brand .or { color: var(--faint); font-size: 0.7em; font-weight: 600; }
+.brand .trader { color: var(--trader); }
+main {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 1.5rem;
+  max-width: 44rem;
+  padding-block: 2rem 4rem;
+}
+.code { display: flex; gap: clamp(0.4rem, 1.5vw, 0.75rem); margin: 0; }
+.slot {
+  display: grid;
+  place-items: center;
+  width: clamp(4.5rem, 17vw, 7.5rem);
+  aspect-ratio: 1;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  background: linear-gradient(var(--wash), var(--wash)), var(--panel);
+  color: var(--accent);
+  font: 700 clamp(3.4rem, 13vw, 5.8rem)/1 var(--display);
+}
+.client { --accent: var(--flea); --wash: rgba(232, 163, 61, 0.1); }
+.server { --accent: var(--alert); --wash: rgba(224, 112, 95, 0.12); }
+h1 { margin: 0; font: 700 clamp(2.2rem, 6vw, 3.4rem)/1 var(--display); }
+p.message { margin: 0; max-width: 52ch; color: var(--muted); font-size: 1.1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-raised);
+  font: 500 0.95rem var(--body);
+  text-decoration: none;
+}
+.button:hover { border-color: var(--muted); }
+.button.primary { border-color: var(--flea); background: var(--flea); color: #1c1f1a; font-weight: 600; }
+.button.primary:hover { border-color: #f3bb63; background: #f3bb63; }
+footer {
+  padding-block: 1.25rem 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+footer p { margin: 0; }
+</style>
+</head>
+<body class="client">
+<header><a class="brand" href="/"><span class="flea">Flea</span><span class="or">or</span><span class="trader">Trader</span></a></header>
+<main>
+<p class="code" aria-label="Error 413"><span class="slot">4</span><span class="slot">1</span><span class="slot">3</span></p>
+<h1>That upload is too large</h1>
+<p class="message">Screenshots must be under 8 MB. Use a PNG or JPEG straight from the game.</p>
+<div class="actions">
+<a class="button primary" href="/">Back to the scanner</a>
+</div>
+</main>
+<footer><p>Error 413. Made by <a href="https://oxylad.me">Oxylad</a>.</p></footer>
+</body>
+</html>

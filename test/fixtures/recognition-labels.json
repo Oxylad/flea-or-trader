@@ -1,0 +1,964 @@
+{
+ "_about": "Short names as shown in-game, read by eye from each screenshot. A match is correct when its short name starts with the label (the game truncates long names). In window fixtures a null label is an empty slot; a detected item cell covering one counts as merged.",
+ "screenshots": [
+  {
+   "file": "public/Discord_sClNi7gz4O.png",
+   "pitch": 63,
+   "windows": [
+    {
+     "x": 23,
+     "y": 39,
+     "rows": [
+      [
+       "Blue",
+       "Yellow",
+       "Green",
+       "Green",
+       "Red",
+       "Red",
+       "Violet",
+       "Violet",
+       "Access",
+       "#11SR",
+       "#11SR"
+      ],
+      [
+       "#11SR",
+       "#11SR",
+       "Polikhim",
+       "Blank RFI",
+       "Blank RFI",
+       "CQ",
+       "Dorm 214",
+       "Dorm 214",
+       "Dorm 214",
+       "Dorm 110",
+       "Gas store"
+      ],
+      [
+       "Dorm 204",
+       "ZB-014",
+       "Dorm 203",
+       "E206 San",
+       "Safe",
+       "Safe",
+       "Safe",
+       "E226 San",
+       "Power",
+       "TGL WT",
+       "SSK"
+      ],
+      [
+       "SSK",
+       "San tape",
+       "Danex",
+       "LexOs",
+       "Conc sec.",
+       "Conc sec.",
+       "Construct",
+       "Finance s",
+       "Conc 34",
+       "Conc 34",
+       "Beluga"
+      ],
+      [
+       "TG meetin",
+       "UC reg.",
+       "Utility",
+       "Utility",
+       "Utility",
+       "Negotiati",
+       "Negotiati",
+       "Relax",
+       "MVD",
+       "USEC cott",
+       "Overseer"
+      ],
+      [
+       "Depot",
+       "Depot",
+       "Depot",
+       "Company",
+       "Company",
+       "Knossos",
+       "Knossos",
+       "Knossos",
+       "Knossos",
+       "Observe",
+       "Corpses"
+      ],
+      [
+       "TG apt.",
+       "Cardinal",
+       "Cardinal",
+       "Cardinal",
+       "Rus Post",
+       "Rus Post",
+       "Rus Post",
+       "Reshala",
+       "Cult victi",
+       "Lighthous",
+       "Lighthous"
+      ]
+     ]
+    },
+    {
+     "x": 726,
+     "y": 32,
+     "rows": [
+      [
+       "Factory",
+       "Factory",
+       "Dorm 315",
+       "Dorm 220",
+       "Cabin",
+       "Shestyork",
+       "Shestyork",
+       "Dorm 110",
+       "Checkpoin",
+       "ZB-014",
+       "ZB-014"
+      ],
+      [
+       "ZB-014",
+       "ZB-014",
+       "Dorm 103",
+       "Dorm 303",
+       "E310 San",
+       "Safe",
+       "W301 San",
+       "W306 San",
+       "OLI office",
+       "OLI Log.",
+       "KIBA oute"
+      ],
+      [
+       "EMC",
+       "EMC",
+       "EMC",
+       "EMC",
+       "OLI reg.",
+       "IDEA reg.",
+       "KIBA Inne",
+       "KIBA Inne",
+       "SSK",
+       "SSK",
+       "RB-AO"
+      ],
+      [
+       "RB-OB",
+       "RB-MP12",
+       "RB-MP12",
+       "RB-PSP1",
+       "RB-MP13",
+       "RB-KORL",
+       "HEPS",
+       "HEPS",
+       "RB-PSP2",
+       "RB-PSP2",
+       "RB-ST"
+      ],
+      [
+       "ULTRA me",
+       "Store",
+       "Merin",
+       "Merin",
+       "Conf.",
+       "Conf.",
+       "WTP stor",
+       "Danex",
+       "Store",
+       "Store",
+       "Conc sec."
+      ],
+      [
+       "Construct",
+       "Construct",
+       "Iron gate",
+       "Conc 34",
+       "Rusted",
+       "Utility",
+       "Utility",
+       "USEC cott",
+       "Overseer",
+       "Overseer",
+       "Overseer"
+      ],
+      [
+       "Depot",
+       "Depot",
+       "Company",
+       "Company",
+       "Company",
+       "Zm. 3",
+       "RB-PKPTS",
+       "RB-PKPTS",
+       "Depot T.",
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "file": "public/Discord_aqt0gHCcC1.png",
+   "pitch": 63,
+   "windows": [
+    {
+     "x": 16,
+     "y": 8,
+     "rows": [
+      [
+       "#11SR",
+       "#21WS",
+       "#21WS",
+       "ER",
+       "Dorm 214",
+       "Dorm 220",
+       "Gas store",
+       "E206 San",
+       "Safe",
+       "W301 San"
+      ],
+      [
+       "RB-PSP2",
+       "Danex",
+       "Conc sec.",
+       "Prim 48",
+       "Utility",
+       "Utility",
+       "Company",
+       "Company",
+       "Resort",
+       "Interchan"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "file": "public/Discord_ES3vmjCbPO.png",
+   "pitch": 63,
+   "windows": [
+    {
+     "x": 20,
+     "y": 39,
+     "rows": [
+      [
+       "Yellow",
+       "Violet",
+       "Violet",
+       "Access",
+       "CQ",
+       "Factory",
+       "Factory",
+       "Dorm 220",
+       "Cabin",
+       "Dorm 110",
+       "Dorm 110"
+      ],
+      [
+       "Gas store",
+       "Checkpoin",
+       "ZB-014",
+       "ZB-014",
+       "ZB-014",
+       "ZB-014",
+       "ZB-014",
+       "E310 San",
+       "Safe",
+       "Safe",
+       "Safe"
+      ],
+      [
+       "Safe",
+       "W301 San",
+       "E226 San",
+       "W306 San",
+       "OLI office",
+       "KIBA oute",
+       "OLI reg.",
+       "IDEA reg.",
+       "KIBA inne",
+       "KIBA inne",
+       "TGL WT"
+      ],
+      [
+       "RB-AO",
+       "RB-OB",
+       "RB-PSP1",
+       "RB-MP13",
+       "RB-KORL",
+       "ULTRA me",
+       "Merin",
+       "Merin",
+       "LexOs",
+       "Conc sec.",
+       "Conc sec."
+      ],
+      [
+       "Construct",
+       "Construct",
+       "Construct",
+       "Iron gate",
+       "Finance s",
+       "Conc 34",
+       "Conc 34",
+       "Conc 34",
+       "Beluga",
+       "TG meetin",
+       "Rusted"
+      ],
+      [
+       "Relax",
+       "Overseer",
+       "Overseer",
+       "Overseer",
+       "Overseer",
+       "Depot",
+       "Depot",
+       "Depot",
+       "Depot",
+       "Depot",
+       "Reshala"
+      ],
+      [
+       "Zm. 3",
+       "RB-PKPTS",
+       "RB-PKPTS",
+       "Lighthous",
+       "Lighthous",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "file": "public/demo.jpg",
+   "cells": [
+    {
+     "x": 1517,
+     "y": 79,
+     "label": null
+    },
+    {
+     "x": 1769,
+     "y": 79,
+     "label": "T H I C C"
+    },
+    {
+     "x": 518,
+     "y": 109,
+     "label": "LEDX"
+    },
+    {
+     "x": 581,
+     "y": 109,
+     "label": "GMcount"
+    },
+    {
+     "x": 644,
+     "y": 109,
+     "label": "GPhone"
+    },
+    {
+     "x": 707,
+     "y": 109,
+     "label": "GPU"
+    },
+    {
+     "x": 833,
+     "y": 109,
+     "label": "GPU"
+    },
+    {
+     "x": 959,
+     "y": 109,
+     "label": "GPU"
+    },
+    {
+     "x": 1085,
+     "y": 109,
+     "label": "GPU"
+    },
+    {
+     "x": 1211,
+     "y": 109,
+     "label": "PCB"
+    },
+    {
+     "x": 1274,
+     "y": 109,
+     "label": "PCB"
+    },
+    {
+     "x": 1337,
+     "y": 109,
+     "label": "ES Lamp"
+    },
+    {
+     "x": 518,
+     "y": 172,
+     "label": "ES Lamp"
+    },
+    {
+     "x": 644,
+     "y": 172,
+     "label": "Cord"
+    },
+    {
+     "x": 770,
+     "y": 172,
+     "label": "1GPhone"
+    },
+    {
+     "x": 833,
+     "y": 172,
+     "label": "RFIDR"
+    },
+    {
+     "x": 896,
+     "y": 172,
+     "label": "RFIDR"
+    },
+    {
+     "x": 959,
+     "y": 172,
+     "label": "VPX"
+    },
+    {
+     "x": 1022,
+     "y": 172,
+     "label": "Tetriz"
+    },
+    {
+     "x": 1085,
+     "y": 172,
+     "label": "Tetriz"
+    },
+    {
+     "x": 1148,
+     "y": 172,
+     "label": "MCB"
+    },
+    {
+     "x": 1211,
+     "y": 172,
+     "label": "MCB"
+    },
+    {
+     "x": 1274,
+     "y": 172,
+     "label": "MCB"
+    },
+    {
+     "x": 1337,
+     "y": 172,
+     "label": "Iridium"
+    },
+    {
+     "x": 518,
+     "y": 235,
+     "label": "Iridium"
+    },
+    {
+     "x": 581,
+     "y": 235,
+     "label": "Iridium"
+    },
+    {
+     "x": 644,
+     "y": 235,
+     "label": "EC"
+    },
+    {
+     "x": 707,
+     "y": 235,
+     "label": "EC"
+    },
+    {
+     "x": 770,
+     "y": 235,
+     "label": "EC"
+    },
+    {
+     "x": 833,
+     "y": 235,
+     "label": "GPSA"
+    },
+    {
+     "x": 896,
+     "y": 235,
+     "label": "GPSA"
+    },
+    {
+     "x": 959,
+     "y": 235,
+     "label": "SAS"
+    },
+    {
+     "x": 1148,
+     "y": 235,
+     "label": "Ultralink"
+    },
+    {
+     "x": 1337,
+     "y": 235,
+     "label": "SAS"
+    },
+    {
+     "x": 518,
+     "y": 298,
+     "label": "SAS"
+    },
+    {
+     "x": 581,
+     "y": 298,
+     "label": "SSD"
+    },
+    {
+     "x": 644,
+     "y": 298,
+     "label": "SSD"
+    },
+    {
+     "x": 707,
+     "y": 298,
+     "label": "Diary"
+    },
+    {
+     "x": 770,
+     "y": 298,
+     "label": "Diary"
+    },
+    {
+     "x": 833,
+     "y": 298,
+     "label": "SDiary"
+    },
+    {
+     "x": 896,
+     "y": 298,
+     "label": "Intelligence"
+    },
+    {
+     "x": 1022,
+     "y": 298,
+     "label": "Intelligence"
+    },
+    {
+     "x": 1337,
+     "y": 298,
+     "label": "Blue Folders"
+    },
+    {
+     "x": 518,
+     "y": 361,
+     "label": "Intelligence"
+    },
+    {
+     "x": 644,
+     "y": 361,
+     "label": "Dunduk"
+    },
+    {
+     "x": 833,
+     "y": 361,
+     "label": "Intelligence"
+    },
+    {
+     "x": 959,
+     "y": 361,
+     "label": "Intelligence"
+    },
+    {
+     "x": 1085,
+     "y": 361,
+     "label": "Intelligence"
+    },
+    {
+     "x": 1211,
+     "y": 361,
+     "label": "Intelligence"
+    },
+    {
+     "x": 518,
+     "y": 424,
+     "label": "Dunduk"
+    },
+    {
+     "x": 581,
+     "y": 424,
+     "label": "Dunduk"
+    },
+    {
+     "x": 644,
+     "y": 424,
+     "label": "Dunduk"
+    },
+    {
+     "x": 707,
+     "y": 424,
+     "label": "Teapot"
+    },
+    {
+     "x": 770,
+     "y": 424,
+     "label": "Teapot"
+    },
+    {
+     "x": 833,
+     "y": 424,
+     "label": "Teapot"
+    },
+    {
+     "x": 896,
+     "y": 424,
+     "label": "Teapot"
+    },
+    {
+     "x": 959,
+     "y": 424,
+     "label": "Vase"
+    },
+    {
+     "x": 1085,
+     "y": 424,
+     "label": "Clock"
+    },
+    {
+     "x": 1211,
+     "y": 424,
+     "label": "Roler"
+    },
+    {
+     "x": 1274,
+     "y": 424,
+     "label": "Roler"
+    },
+    {
+     "x": 1337,
+     "y": 424,
+     "label": "Roler"
+    },
+    {
+     "x": 518,
+     "y": 487,
+     "label": "Roler"
+    },
+    {
+     "x": 581,
+     "y": 487,
+     "label": "Roler"
+    },
+    {
+     "x": 644,
+     "y": 487,
+     "label": "Roler"
+    },
+    {
+     "x": 1211,
+     "y": 487,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 1274,
+     "y": 487,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 1337,
+     "y": 487,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 518,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 581,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 644,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 707,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 770,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 833,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 896,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 959,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 1022,
+     "y": 550,
+     "label": "0.2BTC"
+    },
+    {
+     "x": 1085,
+     "y": 550,
+     "label": "Rooster"
+    },
+    {
+     "x": 1211,
+     "y": 550,
+     "label": "Rooster"
+    },
+    {
+     "x": 1337,
+     "y": 550,
+     "label": "Badge"
+    },
+    {
+     "x": 1580,
+     "y": 583,
+     "label": "Dogtags"
+    },
+    {
+     "x": 1643,
+     "y": 583,
+     "label": "Dogtags"
+    },
+    {
+     "x": 1706,
+     "y": 583,
+     "label": "Dogtags"
+    },
+    {
+     "x": 518,
+     "y": 613,
+     "label": "Badge"
+    },
+    {
+     "x": 581,
+     "y": 613,
+     "label": "Badge"
+    },
+    {
+     "x": 644,
+     "y": 613,
+     "label": "Prokill"
+    },
+    {
+     "x": 707,
+     "y": 613,
+     "label": "Skull"
+    },
+    {
+     "x": 770,
+     "y": 613,
+     "label": "Skull"
+    },
+    {
+     "x": 833,
+     "y": 613,
+     "label": "Raven"
+    },
+    {
+     "x": 896,
+     "y": 613,
+     "label": "Veritas"
+    },
+    {
+     "x": 959,
+     "y": 613,
+     "label": "Veritas"
+    },
+    {
+     "x": 1022,
+     "y": 613,
+     "label": "Veritas"
+    },
+    {
+     "x": 1337,
+     "y": 613,
+     "label": "Veritas"
+    },
+    {
+     "x": 518,
+     "y": 676,
+     "label": "Axel"
+    },
+    {
+     "x": 581,
+     "y": 676,
+     "label": "Axel"
+    },
+    {
+     "x": 644,
+     "y": 676,
+     "label": "Axel"
+    },
+    {
+     "x": 707,
+     "y": 676,
+     "label": "Axel"
+    },
+    {
+     "x": 770,
+     "y": 676,
+     "label": "Egg"
+    },
+    {
+     "x": 896,
+     "y": 676,
+     "label": "Egg"
+    },
+    {
+     "x": 959,
+     "y": 676,
+     "label": "Tamatthi"
+    },
+    {
+     "x": 1022,
+     "y": 676,
+     "label": "Viibiin"
+    },
+    {
+     "x": 1148,
+     "y": 676,
+     "label": "Viibiin"
+    },
+    {
+     "x": 1274,
+     "y": 676,
+     "label": "Desmond"
+    },
+    {
+     "x": 1337,
+     "y": 676,
+     "label": "Desmond"
+    },
+    {
+     "x": 770,
+     "y": 739,
+     "label": "KC-130"
+    },
+    {
+     "x": 896,
+     "y": 739,
+     "label": "FCond"
+    },
+    {
+     "x": 1022,
+     "y": 739,
+     "label": "KC-130"
+    },
+    {
+     "x": 1148,
+     "y": 739,
+     "label": "KC-130"
+    },
+    {
+     "x": 1274,
+     "y": 739,
+     "label": "KC-130"
+    },
+    {
+     "x": 518,
+     "y": 802,
+     "label": "Propane"
+    },
+    {
+     "x": 644,
+     "y": 802,
+     "label": "TP-200"
+    },
+    {
+     "x": 707,
+     "y": 802,
+     "label": "TP-200"
+    },
+    {
+     "x": 959,
+     "y": 802,
+     "label": "TP-200"
+    },
+    {
+     "x": 644,
+     "y": 865,
+     "label": "PGW"
+    },
+    {
+     "x": 707,
+     "y": 865,
+     "label": "42"
+    },
+    {
+     "x": 770,
+     "y": 865,
+     "label": "42"
+    },
+    {
+     "x": 833,
+     "y": 865,
+     "label": "Hawk"
+    },
+    {
+     "x": 896,
+     "y": 865,
+     "label": "DrLupo's"
+    },
+    {
+     "x": 959,
+     "y": 865,
+     "label": "DrLupo's"
+    },
+    {
+     "x": 1022,
+     "y": 865,
+     "label": "Loot Lord"
+    },
+    {
+     "x": 1148,
+     "y": 865,
+     "label": "Loot Lord"
+    },
+    {
+     "x": 1274,
+     "y": 865,
+     "label": "Loot Lord"
+    },
+    {
+     "x": 518,
+     "y": 928,
+     "label": "Pass"
+    },
+    {
+     "x": 707,
+     "y": 928,
+     "label": "Pickles"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1375 @@
+:root {
+  color-scheme: dark;
+
+  --ground: #1c1f1a;
+  --panel: #252922;
+  --panel-raised: #2e332a;
+  --line: #3b4136;
+  --text: #e6e1d0;
+  --muted: #a3a291;
+  --faint: #767768;
+  --flea: #e8a33d;
+  --flea-wash: rgba(232, 163, 61, 0.14);
+  --trader: #7eb6cf;
+  --trader-wash: rgba(126, 182, 207, 0.13);
+  --alert: #e0705f;
+  --alert-wash: rgba(224, 112, 95, 0.16);
+
+  --display: "Saira Extra Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Saira Semi Condensed", "Segoe UI", system-ui, sans-serif;
+
+  --radius-small: 3px;
+  --radius: 6px;
+  --gutter: clamp(1rem, 3vw, 2rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ground);
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 0.35em;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-small);
+  background: var(--panel-raised);
+  font-family: var(--body);
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Page frame ------------------------------------------------------------ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+main {
+  flex: 1;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-family: var(--display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand__flea {
+  color: var(--flea);
+}
+
+.brand__or {
+  color: var(--faint);
+  font-weight: 600;
+  font-size: 0.7em;
+}
+
+.brand__trader {
+  color: var(--trader);
+}
+
+.mode {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.mode__option {
+  min-width: 3.6rem;
+  padding: 0.25rem 0.8rem;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--muted);
+  font: 600 0.95rem var(--body);
+  cursor: pointer;
+}
+
+.mode__option[aria-checked="true"] {
+  background: var(--text);
+  color: var(--ground);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 2rem;
+  margin-top: 3rem;
+  padding-block: 1.25rem 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Buttons --------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-raised);
+  color: var(--text);
+  font: 500 0.95rem var(--body);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  border-color: var(--muted);
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.button--primary {
+  border-color: var(--flea);
+  background: var(--flea);
+  color: #1c1f1a;
+  font-weight: 600;
+}
+
+.button--primary:hover:not(:disabled) {
+  border-color: #f3bb63;
+  background: #f3bb63;
+}
+
+.button--quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+.button--small {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.button--wide {
+  width: 100%;
+}
+
+/* The small link out to Tarkov.dev, shown when a box or a row is hovered. */
+.linkout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: rgba(28, 31, 26, 0.92);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.linkout:hover {
+  border-color: var(--muted);
+  background: var(--panel-raised);
+}
+
+/* Drop target ----------------------------------------------------------- */
+
+.drop {
+  position: relative;
+  padding: clamp(2rem, 7vw, 5.5rem) clamp(1.25rem, 6vw, 5rem);
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, var(--flea-wash) 0 50%, var(--trader-wash) 50% 100%) top / 100% 4px no-repeat,
+    var(--panel);
+  transition: border-color 120ms;
+}
+
+.drop--over {
+  border-color: var(--flea);
+}
+
+.drop[aria-busy="true"] {
+  border-color: var(--muted);
+}
+
+.drop__art {
+  position: absolute;
+  top: 50%;
+  right: clamp(1.5rem, 5vw, 5rem);
+  width: min(30%, 22rem);
+  transform: translateY(-50%);
+}
+
+.drop__art rect {
+  fill: none;
+  stroke-width: 2;
+}
+
+.drop__art .art-flea {
+  stroke: var(--flea);
+  fill: var(--flea-wash);
+}
+
+.drop__art .art-trader {
+  stroke: var(--trader);
+}
+
+.drop__art .art-slot {
+  stroke: var(--line);
+}
+
+@media (max-width: 1000px) {
+  .drop__art {
+    display: none;
+  }
+
+  .drop__lead {
+    max-width: 58ch;
+  }
+}
+
+.drop__title {
+  max-width: 17ch;
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+}
+
+.drop__lead {
+  max-width: min(58ch, 62%);
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.drop__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.drop--compact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1rem;
+  background: var(--panel);
+}
+
+.drop--compact .drop__lead {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.intro {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.intro__settings {
+  max-width: 48rem;
+}
+
+/* Status ---------------------------------------------------------------- */
+
+.status {
+  margin: 1rem 0;
+  color: var(--muted);
+}
+
+.status--error {
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--alert);
+  background: var(--alert-wash);
+  color: var(--text);
+}
+
+/* Workspace ------------------------------------------------------------- */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+  align-items: start;
+}
+
+/* The screenshot stays in view beside a long list, scrolling on its own when
+   the inspector makes it taller than the window. */
+.workspace__shot {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 1000px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace__shot {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* The row above the screenshot: which grids are counted, and the fullscreen button. */
+.shot-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.shot-bar__full {
+  margin-left: auto;
+}
+
+.shot-bar__icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: square;
+}
+
+.windows {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.windows__label {
+  margin-right: 0.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.chip {
+  padding: 0.15rem 0.65rem;
+  border: 1px dashed var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: 500 0.85rem var(--body);
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  border-style: solid;
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* Screenshot ------------------------------------------------------------ */
+
+.shot {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #000;
+}
+
+.shot__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shot__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* On the corner of its box: small, so most of the box stays clickable and visible. */
+.shot__link {
+  position: absolute;
+  z-index: 3;
+  width: 1.15rem;
+  height: 1.15rem;
+  font-size: 0.72rem;
+  /* Mostly inside the box, so it is never clipped at the edge of the image. */
+  transform: translate(-80%, -15%);
+}
+
+.shot__window rect {
+  fill: rgba(12, 14, 11, 0.62);
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 4;
+  cursor: pointer;
+}
+
+.shot__window:hover rect,
+.shot__window:focus-visible rect {
+  fill: rgba(12, 14, 11, 0.4);
+  stroke: var(--text);
+}
+
+.cell {
+  cursor: pointer;
+  outline: none;
+}
+
+.cell rect {
+  fill: transparent;
+  stroke-width: 2;
+}
+
+.cell--flea rect {
+  stroke: var(--flea);
+  fill: rgba(232, 163, 61, 0.1);
+}
+
+.cell--trader rect {
+  stroke: var(--trader);
+}
+
+.cell--none rect {
+  stroke: var(--faint);
+}
+
+.cell--dismissed rect {
+  stroke: var(--faint);
+  stroke-opacity: 0.5;
+  fill: rgba(12, 14, 11, 0.55);
+}
+
+.cell--unrecognised rect {
+  stroke: var(--alert);
+  stroke-width: 2.5;
+  fill: rgba(224, 112, 95, 0.3);
+}
+
+.cell--unsure rect {
+  stroke-dasharray: 5 3;
+}
+
+.cell--highlighted rect {
+  stroke-width: 3;
+  fill: rgba(230, 225, 208, 0.22);
+}
+
+.cell--active rect,
+.cell:focus-visible rect {
+  stroke: #fff;
+  stroke-width: 3.5;
+  stroke-dasharray: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cell--unrecognised rect {
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    fill: rgba(224, 112, 95, 0.08);
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.2rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.legend li::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.4rem;
+  border: 2px solid;
+  border-radius: 2px;
+  vertical-align: -0.1rem;
+}
+
+.legend .legend__flea::before {
+  border-color: var(--flea);
+}
+
+.legend .legend__trader::before {
+  border-color: var(--trader);
+}
+
+.legend .legend__unrecognised::before {
+  border-color: var(--alert);
+  background: var(--alert-wash);
+}
+
+.legend .legend__unsure::before {
+  border-style: dashed;
+  border-color: var(--muted);
+}
+
+/* Fullscreen screenshot --------------------------------------------------- */
+
+.fullscreen[open] {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: var(--fullscreen-pad);
+  border: 0;
+  background: var(--ground);
+  color: var(--text);
+  overflow: hidden;
+
+  --fullscreen-pad: clamp(0.6rem, 2vw, 1.25rem);
+  /* How tall the screenshot may be: the window, less the padding. */
+  --shot-max-height: calc(100dvh - 2 * var(--fullscreen-pad));
+}
+
+.fullscreen::backdrop {
+  background: rgba(12, 14, 11, 0.85);
+}
+
+.fullscreen__stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.shot--full {
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.shot--full .shot__image {
+  width: auto;
+  max-width: 100%;
+  max-height: var(--shot-max-height);
+}
+
+.fullscreen__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 13rem;
+  flex-shrink: 0;
+}
+
+/* Checking an item needs room, so the side widens and the screenshot gives it up. */
+.fullscreen--checking .fullscreen__side {
+  width: min(24rem, 34vw);
+}
+
+.fullscreen__side .inspector {
+  flex: 1;
+  align-self: stretch;
+  min-height: 0;
+  margin-top: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.fullscreen__side .legend {
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.fullscreen__hint {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+.fullscreen__close {
+  margin-top: auto;
+}
+
+/* Narrow or tall windows: the legend goes under the screenshot instead. */
+@media (max-width: 720px), (max-aspect-ratio: 1 / 1) {
+  .fullscreen[open] {
+    flex-direction: column;
+    --shot-max-height: calc(100dvh - 2 * var(--fullscreen-pad) - 6.5rem);
+  }
+
+  .fullscreen__side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  .fullscreen__side .legend {
+    flex-direction: row;
+    gap: 0.3rem 1.2rem;
+  }
+
+  .fullscreen__hint {
+    display: none;
+  }
+
+  .fullscreen__close {
+    margin: 0;
+  }
+
+  /* The item being checked goes under the legend, on a line of its own, and the
+     screenshot keeps a fixed slice of the window instead of being squeezed out. */
+  /* [open] as well, to outweigh the height set for the dialog above. */
+  .fullscreen[open].fullscreen--checking {
+    --shot-max-height: calc(45dvh - var(--fullscreen-pad));
+  }
+
+  .fullscreen--checking .fullscreen__stage {
+    /* No taller than its share of the window, and no taller than the image. */
+    flex: 0 0 auto;
+    max-height: var(--shot-max-height);
+  }
+
+  .fullscreen--checking .fullscreen__side {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .fullscreen__side .inspector {
+    flex: none;
+    flex-basis: 100%;
+    overflow: visible;
+  }
+
+  .fullscreen--checking .fullscreen__close {
+    order: 1;
+  }
+}
+
+.preview {
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background-repeat: no-repeat;
+}
+
+/* Inspector ------------------------------------------------------------- */
+
+.inspector {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--panel);
+  scroll-margin: 1rem;
+}
+
+.inspector--compact {
+  gap: 0.5rem;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.inspector--compact .inspector__head {
+  gap: 0.6rem;
+}
+
+.inspector--compact .inspector__title {
+  font-size: 1.2rem;
+}
+
+.inspector--compact .inspector__hint {
+  display: none;
+}
+
+.inspector--compact .verdict {
+  padding: 0.6rem 0.7rem;
+}
+
+.inspector--compact .verdict__where {
+  font-size: 1.2rem;
+}
+
+.inspector--compact .verdict__value {
+  font-size: 1rem;
+}
+
+.inspector--compact .pick {
+  padding: 0.3rem 0.45rem;
+  column-gap: 0.5rem;
+}
+
+.inspector--compact .pick__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.verdict {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.8rem 0.9rem;
+  border-left: 4px solid var(--faint);
+  border-radius: var(--radius-small);
+  background: var(--panel-raised);
+}
+
+.verdict--flea {
+  border-color: var(--flea);
+  background: linear-gradient(90deg, var(--flea-wash), transparent 70%), var(--panel-raised);
+}
+
+.verdict--trader {
+  border-color: var(--trader);
+  background: linear-gradient(90deg, var(--trader-wash), transparent 70%), var(--panel-raised);
+}
+
+.verdict__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.verdict__where {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.verdict--flea .verdict__where {
+  color: var(--flea);
+}
+
+.verdict--trader .verdict__where {
+  color: var(--trader);
+}
+
+.verdict__value {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.verdict__value small,
+.verdict__compare small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.verdict__value small {
+  text-align: right;
+}
+
+.verdict__compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+.verdict__compare dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.verdict__compare dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.verdict__reason {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.inspector__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.inspector__text {
+  flex: 1;
+}
+
+.inspector__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.inspector__title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.inspector__hint {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.inspector__subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.inspector__split {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-small);
+  background: var(--panel-raised);
+  font-size: 0.9rem;
+}
+
+.inspector__split-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.picks {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pick {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-small);
+  background: var(--panel-raised);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pick:hover {
+  border-color: var(--line);
+}
+
+.pick--selected {
+  border-color: var(--text);
+}
+
+.pick__icon {
+  grid-row: span 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-small);
+  background: #000;
+  object-fit: contain;
+}
+
+.pick__name {
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pick__detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: var(--ground);
+  color: var(--text);
+  font: inherit;
+}
+
+/* Sell sheet ------------------------------------------------------------ */
+
+.sheet {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ledger__total {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.ledger__caption {
+  margin: 0.4rem 0 1rem;
+  color: var(--muted);
+}
+
+.ledger__bar {
+  display: flex;
+  gap: 3px;
+  height: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.ledger__bar span {
+  flex-basis: 0;
+  border-radius: 2px;
+}
+
+.ledger__flea {
+  background: var(--flea);
+}
+
+.ledger__trader {
+  background: var(--trader);
+}
+
+.ledger__split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2.5rem;
+  margin: 0;
+}
+
+.ledger__split dt {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.ledger__split div:first-child dt {
+  color: var(--flea);
+}
+
+.ledger__split div:last-child dt {
+  color: var(--trader);
+}
+
+.ledger__split dd {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ledger__split small {
+  margin-left: 0.5rem;
+  color: var(--faint);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.notice {
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  border-left: 3px solid var(--alert);
+  border-radius: 0;
+  background: var(--alert-wash);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.notice:hover {
+  text-decoration: underline;
+}
+
+.group {
+  border-top: 3px solid var(--line);
+}
+
+.group--flea {
+  border-color: var(--flea);
+}
+
+.group--trader {
+  border-color: var(--trader);
+}
+
+.group__title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding-block: 0.55rem 0.4rem;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.group--flea .group__title {
+  color: var(--flea);
+}
+
+.group--trader .group__title {
+  color: var(--trader);
+}
+
+.group__avatar {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: var(--radius-small);
+  object-fit: cover;
+}
+
+.group__sum {
+  margin-left: auto;
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows li {
+  position: relative;
+}
+
+.rows li + li {
+  border-top: 1px solid var(--line);
+}
+
+/* Over the corner of the item's icon, out of the way until the row is hovered. */
+.row__link {
+  position: absolute;
+  /* The top right corner of the icon, hanging off it into the gutter. */
+  top: 0.6rem;
+  left: 3rem;
+  opacity: 0;
+  transform: translate(-60%, -35%);
+  transition: opacity 0.12s ease;
+}
+
+.rows li:hover .row__link,
+.rows li:focus-within .row__link {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row__link {
+    transition: none;
+  }
+}
+
+/* Without hover there is nothing to reveal the link, so it always shows. */
+@media (hover: none) {
+  .row__link {
+    opacity: 1;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon name value"
+    "icon detail detail";
+  column-gap: 0.75rem;
+  width: 100%;
+  padding: 0.6rem 0.25rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row:hover {
+  background: var(--panel);
+}
+
+.row__icon {
+  grid-area: icon;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-small);
+  background: #000;
+  object-fit: contain;
+}
+
+.row__name {
+  grid-area: name;
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row__count {
+  margin-left: 0.4rem;
+  color: var(--muted);
+}
+
+.row__value {
+  grid-area: value;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.row__detail {
+  grid-area: detail;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.tag {
+  margin-left: 0.5rem;
+  padding: 0 0.4rem;
+  border: 1px dashed var(--muted);
+  border-radius: var(--radius-small);
+  color: var(--muted);
+  font-size: 0.75rem;
+  vertical-align: 0.1em;
+}
+
+.sheet__empty {
+  color: var(--muted);
+}
+
+/* Settings -------------------------------------------------------------- */
+
+.settings {
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.intro .settings {
+  margin-top: 0;
+}
+
+.settings summary {
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem 1.5rem;
+  padding: 0.25rem 1rem 1rem;
+}
+
+.settings__note {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+.field {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field legend {
+  margin-bottom: 0.3rem;
+  padding: 0;
+}
+
+.field__input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field input[type="number"] {
+  width: 7rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: var(--ground);
+  color: var(--text);
+  font: inherit;
+}
+
+.field input:disabled {
+  opacity: 0.5;
+}
+
+.field--check {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+}
+
+.field--check input {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--flea);
+}
+
+.segmented {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+}
+
+.segmented label {
+  position: relative;
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+}
+
+.segmented span {
+  display: block;
+  padding: 0.3rem 0.7rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.segmented input:checked + span {
+  background: var(--text);
+  color: var(--ground);
+}
+
+.segmented input:focus-visible + span {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}

@@ -10,6 +10,33 @@
       name="description"
       content="Paste a screenshot of an opened Escape from Tarkov item case. See which items earn more on the flea market after fees and which to sell to traders."
     />
+
+    <!-- Open Graph, for the link preview. Kept as the fallback for Telegram and
+         Slack, and for Discord itself when it will not use the card below. -->
+    <meta property="og:site_name" content="Flea or Trader" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Flea or Trader: where to sell what's in your Tarkov case" />
+    <meta property="og:description" content="Paste a screenshot of an opened Escape from Tarkov item case. See which items earn more on the flea market after fees and which to sell to traders." />
+    <meta property="og:url" content="https://flea.oxylad.me/" />
+    <meta property="og:image" content="https://flea.oxylad.me/demo.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="A scanned junk box with every item sorted into flea market and trader sales" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- The Components V2 card Discord renders for a link to this site instead
+         of building its own preview from the tags above. The root has to be a
+         Container (type 17), buttons are link buttons only, and the image has
+         to be absolute and fetchable by Discord's crawler inside the same 10 s
+         budget as the page. A rejected payload fails silently: you get the
+         Open Graph preview and no error anywhere.
+         https://discord.com/developers/docs/link-previews/component-embeds
+         The same card is built in code on the other sites, for instance
+         instafix's handlers/component_embed.go. One page, one card, so this one
+         is written out. accent_color is --flea (#e8a33d) from styles.css, as
+         the integer Discord takes. -->
+    <script id="discord:component-embed" type="application/json">{"component":{"type":17,"accent_color":15245117,"components":[{"type":10,"content":"-# [Flea or Trader](https://flea.oxylad.me)\n**Where to sell what's in your Tarkov case**\nPaste a screenshot of an opened case, junk box or container. Every item is recognised and sorted into what earns more on the flea market after the fee, and what a trader pays more for."},{"type":12,"items":[{"media":{"url":"https://flea.oxylad.me/demo.jpg"}}]},{"type":1,"components":[{"type":2,"style":5,"url":"https://flea.oxylad.me/demo","label":"See a scanned example"}]}]}}</script>
+
     <link rel="icon" href="../public/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
